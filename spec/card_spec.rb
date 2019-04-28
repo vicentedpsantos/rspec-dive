@@ -28,4 +28,9 @@ RSpec.describe Card do
   it 'has a type' do
     expect(card.type).to eq('Ace of Spades')
   end
+
+  it 'has a custom error message' do
+    comparison = 'Spade'
+    expect(card.suite).to eq(comparison), "Expected #{comparison}, but got #{card.suite} instead"
+  end
 end
