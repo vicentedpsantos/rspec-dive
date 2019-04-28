@@ -8,13 +8,15 @@ class School
 end
 
 RSpec.describe School do
+  before do
+    @school = School.new('Pastor Dohms High School')
+  end
+
   it 'has a name' do
-    school = School.new('Pastor Dohms High School')
-    expect(school.name).to eq('Pastor Dohms High School')
+    expect(@school.name).to eq('Pastor Dohms High School')
   end
 
   it 'should start off with no students' do
-    school = School.new('Unificado High School')
-    expect(school.students).to eq([])
+    expect(@school.students).to eq([])
   end
 end
